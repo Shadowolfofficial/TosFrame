@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8" />
+  <meta name="author" content="Jacob Strieb" />
+  <meta name="description" content="Password protect links using AES in the browser." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <title>Link Lock - Password-protect links</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="b64.js"></script>
+  <script type="text/javascript" src="api.js"></script>
+  <script type="text/javascript" src="index.js"> </script>
+</head>
+
+<body onload="main()">
+  <!-- Explanation for those who do not have JavaScript enabled -->
+  <noscript>
+  <div class="red-border">
+    <p>ThunderOs Maintenence</p>
+    <p>An error has occurred ThunderOs services are unavailable or under maintenance Sorry for the inconvenience.</p>
+    <p>Information Error: Password blocked and maintenance.</p>
+    <h3>MGrn (Admin)</h3>
+  </div>
+  </noscript>
+
+  <!-- Display errors in a big red box -->
+  <div class="error red-border" style="display: none">
+    <p id="errortext">Error</p>
+    <button onclick="main()">Réessayer</button>
+</body>
+
+</html>
