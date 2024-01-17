@@ -48,9 +48,9 @@ async function main() {
     let hint, password;
     if ("h" in params) {
       hint = params["h"];
-      password = prompt(`Veuillez entrer votre code invite pour accéder à ThunderOs.\n\nHint: ${hint}`);
+      password = prompt(`Bienvenue Glitch (user) veuillez entrer votre code invite pour accéder à ThunderOs.\n\nHint: ${hint}`);
     } else {
-      password = prompt("Veuillez entrer votre code invite pour accéder à ThunderOs.");
+      password = prompt("Bienvenue Glitch (user) veuillez entrer votre code invite pour accéder à ThunderOs.");
     }
 
     // Decrypt and redirect if possible
@@ -59,7 +59,7 @@ async function main() {
       url = await api.decrypt(encrypted, password, salt, iv);
     } catch {
       // Password is incorrect.
-      error("Code incorrect.");
+      error("Code incorrect ou na pas été saisi a cause d'une publicité.");
 
       // Set the "decrypt without redirect" URL appropriately
       document.querySelector("#no-redirect").href =
